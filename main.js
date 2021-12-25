@@ -107,10 +107,11 @@ function guessYourNum(min, max, mid = (min + max)/2){
         }
         if( (range1.to - range1.from) === 1){
             stage.innerText = `Your number is ${range1.to}! Easy breezy!`
+            greaterButton.setAttribute("disabled", "disabled");
+            lessButton.setAttribute("disabled", "disabled");
         }else{
             guessYourNum(range1.from, range1.to);
         }
-        return true;
     })
     
     lessButton.addEventListener('click', function lessButtonPressed(){
@@ -120,10 +121,11 @@ function guessYourNum(min, max, mid = (min + max)/2){
         }
         if( (range2.to - range2.from) === 1){
             stage.innerText = `Your number is ${range2.to}! Easy breezy!`
+            greaterButton.setAttribute("disabled", "disabled");
+            lessButton.setAttribute("disabled", "disabled");
         }else{
             guessYourNum(range2.from, range2.to);
         }
-        return true;
     })
 }
 
